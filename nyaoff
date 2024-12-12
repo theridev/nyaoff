@@ -1,0 +1,39 @@
+#!/bin/bash
+# nyaoff - a cute poweroff screen for yall
+# made for my cutie leafusowo I LOVE YOUUUU (platonically ofc haha ;3)
+# Version: 1.0
+
+# silly colors :3
+RED='\e[1;91m'
+GREEN='\e[1;92m'
+PINK='\033[38;2;245;194;231m'
+PURPLE='\033[38;2;203;166;247m'
+
+# silly menu :3
+echo -e "${PINK}"
+echo -e "      ╭─ UwU ───────────────────────────────────────────╮"
+echo -e "      │  ${PURPLE}Hewwo~${PINK} Wat do u wanna do with ur computer? :3 │"
+echo -e "      │                                                 │"
+echo -e "      │ (1) 󰐥${RED} Put computer to eep :3${PINK}                    │"
+echo -e "      │ (2) 󱥸 ${GREEN}Restart the machine :333${PINK}                  │"
+echo -e "      │                                                 │"
+echo -e "      ╰─────────────────────────────────────────────────╯"
+
+# input... nyaa~
+echo -ne " ${PINK}> "
+read -n 1 -t 10 INPUT
+echo # sexy echo command
+
+# check which input the cutie entered :3
+if [[ $INPUT == "1" ]]; then
+  echo -e "${PURPLE}meow~ Putting ur lil pc to sleep...${PINK}"
+  systemctl shutdown # eep
+elif [[ $INPUT == "2" ]]; then
+  echo -e "${GREEN}Nyaa~ Rebwooting machine... See ya :D ${PINK}"
+  systemctl reboot # reboowting
+else               # oopsie
+  echo -e "${RED}Oopsie~ Invalid input. Nya, try again later!${PINK}"
+fi
+
+# theridev was here :333
+# ily!!!
